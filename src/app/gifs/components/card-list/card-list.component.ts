@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { GifsService } from '../services/gifs.service';
+import { GifsService } from '../../services/gifs.service';
 
 @Component({
-  selector: 'app-results',
-  templateUrl: './results.component.html',
-  styleUrls: ['./results.component.css'],
+  selector: 'gifs-card-list',
+  templateUrl: './card-list.component.html',
+  styleUrls: ['./card-list.component.css'],
 })
 export class ResultsComponent {
   get results() {

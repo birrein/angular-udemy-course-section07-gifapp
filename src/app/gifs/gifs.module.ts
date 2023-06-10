@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GifsPageComponent } from './gifs-page/gifs-page.component';
 import { SearchComponent } from './components/search-box/search-box.component';
-import { ResultsComponent } from './results/results.component';
+import { ResultsComponent } from './components/card-list/card-list.component';
 
 @NgModule({
   declarations: [GifsPageComponent, SearchComponent, ResultsComponent],
