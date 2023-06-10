@@ -9,7 +9,7 @@ import { SearchResponse, Gif } from '../interfaces/gifs.interfaces';
 export class GifsService {
   private _history: string[] = [];
 
-  public results: Gif[] = [];
+  public gifList: Gif[] = [];
 
   get history() {
     return [...this._history];
@@ -17,7 +17,7 @@ export class GifsService {
 
   constructor(private http: HttpClient) {
     this._history = JSON.parse(localStorage.getItem('history')!) || [];
-    this.results = JSON.parse(localStorage.getItem('results')!) || [];
+    this.gifList = JSON.parse(localStorage.getItem('results')!) || [];
   }
 
   searchGifs = (query: string) => {
@@ -35,8 +35,8 @@ export class GifsService {
     this.http
       .get<SearchResponse>(`${environment.giphyApiUrl}/search?`, { params })
       .subscribe((resp) => {
-        this.results = resp.data;
-        localStorage.setItem('results', JSON.stringify(this.results));
+        this.gifList = resp.data;
+        localStorage.setItem('results', JSON.stringify(this.gifList));
       });
   };
 }
