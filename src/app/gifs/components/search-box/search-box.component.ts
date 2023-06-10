@@ -1,10 +1,10 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { GifsService } from '../services/gifs.service';
+import { GifsService } from '../../services/gifs.service';
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
+  selector: 'gifs-search-box',
+  templateUrl: './search-box.component.html',
+  styleUrls: ['./search-box.component.css'],
 })
 export class SearchComponent {
   @ViewChild('txtSearch') txtSearch!: ElementRef<HTMLInputElement>;

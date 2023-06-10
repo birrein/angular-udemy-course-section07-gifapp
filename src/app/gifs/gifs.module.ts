@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GifsPageComponent } from './gifs-page/gifs-page.component';
-import { SearchComponent } from './search/search.component';
+import { SearchComponent } from './components/search-box/search-box.component';
 import { ResultsComponent } from './results/results.component';
 
 @NgModule({
