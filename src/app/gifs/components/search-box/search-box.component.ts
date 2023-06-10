@@ -6,7 +6,7 @@ import { GifsService } from '../../services/gifs.service';
   templateUrl: './search-box.component.html',
   styleUrls: ['./search-box.component.css'],
 })
-export class SearchComponent {
+export class SearchBoxComponent {
   @ViewChild('txtSearch') txtSearch!: ElementRef<HTMLInputElement>;
 
   constructor(private gifsService: GifsService) {}

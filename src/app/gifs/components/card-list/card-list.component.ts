@@ -6,7 +6,7 @@ import { GifsService } from '../../services/gifs.service';
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.css'],
 })
-export class ResultsComponent {
+export class CardListComponent {
   get results() {
     return this.gifsService.results;
   }

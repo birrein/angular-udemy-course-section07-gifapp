@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { SearchGifsResults, Gif } from '../interfaces/search-gifs-results';
+import { SearchResponse, Gif } from '../interfaces/gifs.interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -33,7 +33,7 @@ export class GifsService {
       .set('limit', '10')
       .set('q', query);
     this.http
-      .get<SearchGifsResults>(`${environment.giphyApiUrl}/search?`, { params })
+      .get<SearchResponse>(`${environment.giphyApiUrl}/search?`, { params })
       .subscribe((resp) => {
         this.results = resp.data;
         localStorage.setItem('results', JSON.stringify(this.results));
